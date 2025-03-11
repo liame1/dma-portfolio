@@ -72,6 +72,7 @@ body {
 }
 
 header {
+   padding: 2rem 4rem;
    margin: 0 5vw;
    background-color: burlywood;
 }
@@ -87,7 +88,7 @@ main {
    flex-wrap: wrap;
    justify-content: center; */
    /* delete gap if you would rather use margins */
-   gap: 7rem;
+   gap: 4rem;
 }
 
 section {
