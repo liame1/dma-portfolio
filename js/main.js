@@ -1,11 +1,19 @@
 
+let canvas;
 let angle = 0;
 let x = 0;
 let y = 0;
 
 function setup() {
-  createCanvas(600, 600, WEBGL);
+  canvas = createCanvas(windowWidth, windowHeight, WEBGL);
+  canvas.position(0, 0);
+  canvas.style("z-index", 100);
+
   angleMode(DEGREES);
+}
+
+function windowResized(){
+    resizeCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
