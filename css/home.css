@@ -39,11 +39,14 @@ html {
  }
 
  h1 {
-    padding-left: 3vw;
+   border: 200px;
+   padding-left: 8vw;
+   padding-top: 5vw;
  }
 
  section {
-    padding-left: 3vw;
+    padding-left: 8vw;
+    
  }
 
 .content-wrapper {

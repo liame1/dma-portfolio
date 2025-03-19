@@ -6,9 +6,9 @@ let y = 0;
 
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight, WEBGL);
-  canvas.position(width/8, 0);
+  canvas.position(0, 0);
   canvas.style("z-index", -2);
-
+  
   angleMode(DEGREES);
 }
 
@@ -18,6 +18,8 @@ function windowResized(){
 
 function draw() {
   clear();
+
+  translate(width/14, 0, height/6);
   
   directionalLight(140, 140, 140, 1, 1, -0.7);
   directionalLight(160, 100, 110, -1, -1, 0.7);
@@ -61,9 +63,9 @@ function draw() {
   
   // Torus-2
   push();
-  rotateY(-45);
+  rotateY(angle);
   rotateX(-angle);
-  rotateZ(0);
+  rotateZ(angle);
   torus(330, 15, 50);
   pop();
   
@@ -71,7 +73,7 @@ function draw() {
   push();
   rotateY(-20);
   rotateX(angle);
-  rotateZ(40);
+  rotateZ(angle);
   torus(390, 15, 50);
   pop();
   
