@@ -12,26 +12,28 @@ function setup() {
   angleMode(DEGREES);
 }
 
-function windowResized(){
+function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
+  frameRate(24);
   clear();
 
-  translate(width/14, 0, height/6);
+  translate(width/16, 0, height/5);
   
   directionalLight(140, 140, 140, 1, 1, -0.7);
   directionalLight(160, 100, 110, -1, -1, 0.7);
   
-  orbitControl();
+  // orbitControl();
   
-  ambientMaterial(255);
+  ambientMaterial(255, 10);
+  
   strokeWeight(0);
   
-  x += 1;
-  y += 1;
-  angle += 0.4;
+  x += 2.5;
+  y += 2.5;
+  angle += 1;
   
   
   sinX = sin(x);

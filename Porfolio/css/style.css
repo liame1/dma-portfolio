@@ -82,7 +82,7 @@ main {
    padding: 2rem;
    background: beige;
    display: flex;
-   flex-direction: row;
+   flex-direction: column;
    /* for a grid that wraps, change direction, row, and justify-content */
    /* flex-direction: row;
    flex-wrap: wrap;
