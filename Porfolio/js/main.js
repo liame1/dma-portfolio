@@ -3,6 +3,7 @@ let canvas;
 let angle = 0;
 let x = 0;
 let y = 0;
+let cam;
 
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight, WEBGL);
@@ -10,6 +11,10 @@ function setup() {
   canvas.style("z-index", -2);
   
   angleMode(DEGREES);
+
+  cam = createCamera();
+  // cam.lookAt(0, 0, 0);
+  translate(width/16, 0, height/5);
 }
 
 function windowResized() {
@@ -20,12 +25,12 @@ function draw() {
   frameRate(24);
   clear();
 
-  translate(width/16, 0, height/5);
+  // translate(width/16, 0, height/5);
   
   directionalLight(140, 140, 140, 1, 1, -0.7);
   directionalLight(160, 100, 110, -1, -1, 0.7);
   
-  // orbitControl();
+  orbitControl();
   
   ambientMaterial(255, 10);
   
@@ -38,7 +43,15 @@ function draw() {
   
   sinX = sin(x);
   cosY = cos(y);
-  
+
+  // ROTATING CAMERA
+
+  cam.roll(mouseX/1000);
+  cam.roll(-mouseY/1000);
+  // cam.lookAt(0,0,0);
+  // cam.setPosition(0, 0, 800);
+
+
   x2 = map(sinX, 0, 1, 0, 160);
   y2 = map(cosY, 0, 1, 0, 160);
   
