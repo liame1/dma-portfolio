@@ -30,7 +30,7 @@ function draw() {
   directionalLight(140, 140, 140, 1, 1, -0.7);
   directionalLight(160, 100, 110, -1, -1, 0.7);
   
-  orbitControl();
+  // orbitControl();
   
   ambientMaterial(255, 10);
   

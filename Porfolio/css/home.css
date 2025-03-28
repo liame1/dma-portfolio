@@ -28,21 +28,49 @@ html {
 
  /* ----- BODY ----- */
  body {
-    overflow: hidden;
+    /* overflow: hidden; */
     background: rgb(255, 236, 190);
     margin: 0;
     font-family: 'Open Sans', sans-serif;
  }
 
- header {
-  padding: 0 3vw;
+/* ----- THE DIVINE GRID ----- */
+
+.grid {
+  display: grid;
+  /* grid-template-rows: 100%; */
+  grid-template-columns: 50% 30% 30%;
+}
+
+
+/* ----- HEADER (inside of <nav>) ----- */
+
+header{
+  line-height: 90px;
   font-size: 3rem;
   font-weight: 600;
+  padding: 0 0 5vh 0;
+}
+
+/* ----- NAVIGATION ----- */
+.page-select {
+  height: 100%;
+  width: 70%;
+  padding: 4vh 0 0 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+ }
+
+a {
+  text-decoration: none;
+   color: inherit;
+   text-decoration: none;
 }
 
 .selected-page {
-  display: inline-block;
-  border: 7px solid black;
+  border: 7px solid rgb(100, 0, 0);;
+  /* color: rgb(100, 0, 0); */
   border-radius: 20px;
   padding: 0 1.5vw;
   font-size: 3rem;
@@ -56,34 +84,22 @@ html {
   padding: 0 15px;
 }
 
-
-.page-select {
-  height: 100vh;
-  width: 30%;
-  padding: 10vh 0 0 4vw;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-    
- }
-
- a {
-   color: inherit;
-   text-decoration: none;
- }
-
 .selected-page:hover {
-  display: block;
   color: rgb(100, 0, 0);
   border-color: rgb(100,0,0);
  }
- .not-selected:hover {
+.not-selected:hover {
   color: rgb(100,0,0);
   border-color: rgb(100,0,0);
- }
+}
 
+/* ------ PAGE CONTENT ----- */
 
- footer{
+.image-content {
+  padding: 10vh 0 0 0vw;
+}
+
+footer {
   z-index: 5;
-    margin-top: auto;
+    margin: auto;
  }
