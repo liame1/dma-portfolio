@@ -118,6 +118,19 @@ a {
   opacity: 0.95;
 }
 
+/* ----- ABOUT PAGE ----- */
+.about {
+  border: solid 5px black;
+  border-radius: 5px;
+  color: white;
+  background-color: rgba(54, 54, 54, 0.5);
+  padding: 5%;
+  margin: 5%;
+  justify-content: space-evenly;
+  grid-area: content;
+}
+
+
 footer {
   z-index: 5;
   margin: auto;
@@ -126,7 +139,7 @@ footer {
 /* ----- MODAL // (POPUP IMAGES!) ------- */
 
 .modal {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.7);
   position: fixed;
   top: 0;
   left: 0;
@@ -135,28 +148,39 @@ footer {
   opacity: 0;
   pointer-events: none;
   transition: 0.25s ease-out;
+
+  display: grid;
+  grid-template-columns: 15% 40% 30% 15%;
+  grid-template-rows: 10% 70% 30%;
+  /* justify-content: center; */
+  grid-template-areas: 
+  'padding-left padding-top padding-top padding-right'
+  'padding-left img caption padding-right'
+  'padding-left padding-bottom padding-bottom padding-right';
 }
 .modal p {
   padding: 0 3%;
-  border: solid 7px rgb(192, 192, 192);
+  border: 7px ;
   border-radius: 8px;
   color: rgb(255, 255, 255);
   font-size: 3rem;
-  position: absolute;
   bottom: 15%;
   left: 13%;
+  margin: 0 0 0 3%;
+  background-color: rgba(185, 185, 185, 0.9);
+
+  grid-area: caption;
+
 }
 .modal.open {
   opacity: 1;
   pointer-events: all;
 }
 .full-img {
-  position: absolute;
-  max-width: 780px;
-  max-height: 650px;
-  top: 10%;
-  left: 10%;
+  max-width: 100%;
+  max-height: 100%;
   transition: all 0.25s ease-out;
+  grid-area: img;
 }
 
 /* ----- @media RESPONSIVE ----- */
