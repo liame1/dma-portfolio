@@ -3,7 +3,7 @@ let canvas;
 let angle = 0;
 let x = 0;
 let y = 0;
-let cam;
+// let cam;
 
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight, WEBGL);
@@ -12,9 +12,9 @@ function setup() {
   
   angleMode(DEGREES);
 
-  cam = createCamera();
-  // cam.lookAt(0, 0, 0);
-  translate(width/16, 0, height/5);
+  // cam = createCamera();
+  // // cam.lookAt(0, 0, 0);
+  // translate(width/16, 0, height/5);
 }
 
 function windowResized() {
@@ -22,23 +22,25 @@ function windowResized() {
 }
 
 function draw() {
-  frameRate(24);
+  // frameRate(24);
   clear();
 
-  // translate(width/16, 0, height/5);
+  translate(100, 0, 500);
   
-  directionalLight(140, 140, 140, 1, 1, -0.7);
-  directionalLight(160, 100, 110, -1, -1, 0.7);
+  // directionalLight(140, 140, 140, 1, 1, -0.7);
+  // directionalLight(160, 100, 110, -1, -1, 0.7);
   
   // orbitControl();
   
-  ambientMaterial(255, 10);
+  // ambientMaterial(255, 10);
   
   strokeWeight(0);
   
-  x += 2.5;
-  y += 2.5;
-  angle += 1;
+  // SPEED OF SPHERES
+  x += 0.5;
+  y += 0.5;
+  //SPEED OF TORUSES
+  angle += 0.2;
   
   
   sinX = sin(x);
@@ -46,8 +48,8 @@ function draw() {
 
   // ROTATING CAMERA
 
-  cam.roll(mouseX/1000);
-  cam.roll(-mouseY/1000);
+  // cam.roll(mouseX/1000);
+  // cam.roll(-mouseY/1000);
   // cam.lookAt(0,0,0);
   // cam.setPosition(0, 0, 800);
 
@@ -69,12 +71,12 @@ function draw() {
   sphere(60, 20, 20);
   pop();
   
-  // Torus-1
-  push();
-  rotateZ(120);
-  rotateX(angle);
-  torus(100, 10, 30);
-  pop();
+    // Torus-1
+    push();
+    rotateZ(120);
+    rotateX(angle);
+    torus(100, 10, 30);
+    pop();
   
   // Torus-2
   push();
