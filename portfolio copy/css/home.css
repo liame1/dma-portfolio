@@ -1,0 +1,273 @@
+/*
+CSS RESETS:
+ Border box reset:
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ 62.5% Fix: https: //www.aleksandrhovhannisyan.com/blog/62-5-percent-font-size-trick/
+*/
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+ }
+ 
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+ 
+html, 
+body {
+  height: 100%;
+  font-size: 1.6rem;
+  /* same as 16px using 62.5% fix for rem */
+  line-height: 1.6;
+}
+
+ /* ----- BODY ----- */
+body {
+  /* overflow: hidden; */
+  background: rgb(255, 236, 190);
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* ----- THE DIVINE GRID ----- */
+
+.grid {
+  display: grid;
+  grid-template-rows: 100vh;
+  grid-template-columns: 600px 60% 200px;
+  grid-template-areas: 
+  'nav content aside';
+}
+
+
+/* ----- HEADER (inside of <nav>) ----- */
+
+header{
+  color: rgb(52, 54, 52);
+  line-height: 90px;
+  font-size: 3rem;
+  font-weight: 600;
+  padding: 0 0 5vh 0;
+}
+
+/* ----- NAVIGATION ----- */
+.page-select {
+  padding: 4vh 0 0 4vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+ }
+
+a {
+  text-decoration: none;
+  /* background-color: blueviolet; */
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  padding: 0px 30px;
+}
+
+.selected-page {
+  border: 7px solid black;
+  /* color: rgb(100, 0, 0); */
+  border-radius: 20px;
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 15px 0;
+}
+.not-selected {
+  border: 7px solid black;
+  border-radius: 20px;
+  margin: 1vh;
+  /* padding: 0 15px; */
+}
+.selected-page:hover {
+  color: rgb(100, 0, 0);
+  border-color: rgb(100,0,0);
+ }
+.not-selected:hover {
+  color: rgb(100,0,0);
+  border-color: rgb(100,0,0);
+}
+
+/* ------ PAGE CONTENT ----- */
+
+.preview-img {
+  padding: 08vh 0 0 0vw;
+  grid-area: content;
+  column-count: 3;
+}
+
+.preview-img img {
+  max-width: 350px;
+  max-height: auto;
+  margin: 0% 10%;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.preview-img img:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
+/* ----- ABOUT PAGE ----- */
+.about {
+  border-radius: 7px;
+  color: white;
+  background-color: rgba(54, 54, 54, 0.5);
+  padding: 5%;
+  margin: 5%;
+  justify-content: space-evenly;
+  grid-area: content;
+}
+.about h3 {
+  text-decoration: underline;
+  margin: -3% 0 3% 0;
+}
+.about p {
+  font-family: 'IBM Plex Sans Condensed';
+  font-size: 1rem;
+  height: auto;
+}
+.about img {
+  border: solid 5px rgb(100, 0, 0);
+  border-radius: 20px;
+  margin: 5%;
+  float: right;
+  width: 30%;
+}
+
+
+footer {
+  z-index: 5;
+  margin: auto;
+}
+
+/* ----- MODAL // (POPUP IMAGES!) ------- */
+
+dialog {
+  overflow: hidden;
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  inset: 10%;
+  background-color: rgba(0, 0, 0, .8);
+  outline: 0;
+  border: 0;
+  box-shadow: 0 0 1rem rgb(0, 0, 0, .3);
+  /* overflow: hidden; */
+}
+dialog p {
+  float: right;
+  padding: 5%;
+  color: white; 
+}
+dialog img {
+  margin: 1%;
+  max-width: 60%;
+  max-height: 650px;
+}
+dialog iframe {
+  margin: 3%;
+  width: 60%;
+  height: 80%;
+}
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+/* 
+.full-img {
+  max-width: 100%;
+  max-height: 100%;
+  transition: all 0.25s ease-out;
+} */
+
+/* ----- @media RESPONSIVE ----- */
+
+@media screen and (max-width: 1745px) {
+  .preview-img img {
+    max-width: 450px;
+  }
+  .preview-img {
+    column-count: 2;
+  }
+  .grid {
+    grid-template-columns: 580px 55% 200px;
+  }
+}
+@media screen and (max-width: 1635px) {
+  .preview-img img {
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 1480px) {
+  .preview-img img {
+    max-width: 350px;
+  }
+  .grid {
+    grid-template-columns: 580px 51% 200px;
+  }
+}
+@media screen and (max-width: 1370px) {
+  header{
+    font-size: 2.5rem;
+  }
+  .selected-page {
+    font-size: 2.6rem;
+
+  }
+  .grid {
+    grid-template-columns: 480px 55% 200px;
+  }
+}
+@media screen and (max-width: 1270px) {
+  .preview-img img {
+    max-width: 500px;
+
+  }
+  .preview-img {
+    column-count: 1;
+  }
+}
+@media screen and (max-width: 1090px) {
+  .preview-img img {
+    max-width: 400px;
+
+  }
+}
+@media screen and (max-width: 980px) {
+  .grid {
+    display: flex;
+  }
+}
+@media screen and (max-width: 880px) {
+  .grid {
+    display: grid;
+    grid-template-rows: 800px;
+    grid-template-columns: 100vw;
+    grid-template-areas: 
+    'nav'
+    'content';
+  }
+  .page-select {
+    padding: 1vh 0 0 4vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   }
+}
+
+.disclaimer {
+  position: absolute;
+  bottom: 0;
+  right: 2%;
+  font-size: 1rem;
+  color: rgb(100, 0, 0, 0.2);
+}
