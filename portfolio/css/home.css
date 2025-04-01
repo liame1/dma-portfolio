@@ -159,24 +159,26 @@ footer {
   'padding-left padding-bottom padding-bottom padding-right';
 }
 .modal p {
+  font-style: italic;
   padding: 0 3%;
   border: 7px ;
   border-radius: 8px;
-  color: rgb(255, 255, 255);
-  font-size: 3rem;
+  color: rgb(29, 29, 29);
+  font-size: 1.5rem;
   bottom: 15%;
   left: 13%;
   margin: 0 0 0 3%;
   background-color: rgba(185, 185, 185, 0.9);
 
   grid-area: caption;
-
+  white-space: pre-line;
 }
 .modal.open {
   opacity: 1;
   pointer-events: all;
 }
 .full-img {
+  
   max-width: 100%;
   max-height: 100%;
   transition: all 0.25s ease-out;
@@ -256,4 +258,12 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
    }
+}
+
+.disclaimer {
+  position: absolute;
+  bottom: 0;
+  right: 2%;
+  font-size: 1rem;
+  color: rgb(100, 0, 0, 0.2);
 }
