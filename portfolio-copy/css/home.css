@@ -149,7 +149,7 @@ margin: auto;
 dialog {
 margin: 7%;
 display: grid;
-grid-template-columns: 2% auto auto 2%;
+grid-template-columns: 2% auto 40% 2%;
 grid-template-rows: 4% auto 4%;
 justify-items: center;
 
@@ -175,7 +175,6 @@ dialog p {
 }
 dialog img {
   grid-area: 2 / 2;
-
   max-width: 100%;
   max-height: 100%;
 }
@@ -254,7 +253,7 @@ transition: all 0.25s ease-out;
   dialog {
     margin: center;
     grid-template-columns: 3% auto  3%;
-    grid-template-rows: 2% 40% auto 2%;
+    grid-template-rows: 2% auto auto 2%;
   }
   dialog p {
     grid-area: 3 / 2;
