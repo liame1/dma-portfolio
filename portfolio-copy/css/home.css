@@ -252,7 +252,7 @@ transition: all 0.25s ease-out;
 @media screen and (max-width: 1160px) {
   dialog {
     margin: center;
-    grid-template-columns: 3% auto  3%;
+    grid-template-columns: 3% auto 3%;
     grid-template-rows: 2% auto auto 2%;
   }
   dialog p {
@@ -301,7 +301,7 @@ transition: all 0.25s ease-out;
   .grid {
     display: grid;
     grid-template-rows: auto auto;
-    grid-template-columns: auto;
+    grid-template-columns: 85%;
     grid-template-areas:
     'nav'
     'content';
