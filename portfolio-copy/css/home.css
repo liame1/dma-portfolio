@@ -28,7 +28,6 @@ line-height: 1.6;
 
 /* ----- BODY ----- */
 body {
-/* overflow: hidden; */
 background: rgb(255, 236, 190);
 margin: 0;
 font-family: 'Open Sans', sans-serif;
@@ -56,10 +55,11 @@ margin: 0vh 0 2vh 0;
 
 /* ----- NAVIGATION ----- */
 .page-select {
-padding: 4vh 0 0 4vw;
-display: flex;
-flex-direction: column;
-align-items: flex-start;
+  padding: 4vh 0 0 4vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  grid-area: 'nav';
 }
 
 a {
@@ -147,7 +147,7 @@ margin: auto;
 
 /* ----- MODAL // (POPUP IMAGES!) ------- */
 dialog {
-margin: 5%;
+margin: 7%;
 display: grid;
 grid-template-columns: 2% auto auto 2%;
 grid-template-rows: 4% auto 4%;
@@ -180,8 +180,8 @@ dialog img {
   max-height: 100%;
 }
 dialog iframe {
-width: 100%;
-height: 100%;
+width: auto;
+height: auto;
 grid-area: 2 / 2;
 }
 dialog::backdrop {
@@ -252,7 +252,7 @@ transition: all 0.25s ease-out;
 }
 @media screen and (max-width: 1160px) {
   dialog {
-    margin: 35% 0% 50% 10%;
+    margin: center;
     grid-template-columns: 3% auto  3%;
     grid-template-rows: 2% 40% auto 2%;
   }
