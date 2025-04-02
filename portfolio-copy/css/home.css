@@ -179,7 +179,7 @@ dialog img {
   max-width: 100%;
   max-height: 100%;
 }
-dialog iframe {
+dialog embed {
 width: auto;
 height: auto;
 grid-area: 2 / 2;
