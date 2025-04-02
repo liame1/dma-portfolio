@@ -284,6 +284,7 @@ transition: all 0.25s ease-out;
 @media screen and (max-width: 880px) {
   .preview-img {
     margin-left: 4%;
+    padding: 8vh 10vw 3vh 0;
   }
   .preview-img img {
     max-width: 300px;
@@ -301,7 +302,7 @@ transition: all 0.25s ease-out;
   .grid {
     display: grid;
     grid-template-rows: auto auto;
-    grid-template-columns: 85%;
+    grid-template-columns: 100%;
     grid-template-areas:
     'nav'
     'content';
@@ -329,6 +330,20 @@ transition: all 0.25s ease-out;
     max-width: 150px;
   }
   .preview-img {
-    padding: 2vh 0 0 0;
+    padding: 3vh 14vw 3vh 0;
   }
+}
+@media screen and (max-width: 360px) {
+  .preview-img img {
+    max-width: 135px;
+  }
+  header {
+    font-size: 1.7rem;
+  }
+  .selected-page {
+    font-size: 1.7rem;
+    }
+  .not-selected {
+    font-size: 0.9rem;
+    } 
 }
