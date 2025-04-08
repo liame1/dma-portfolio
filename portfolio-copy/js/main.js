@@ -15,6 +15,7 @@ function setup() {
   // cam = createCamera();
   // // cam.lookAt(0, 0, 0);
   // translate(width/16, 0, height/5);
+
 }
 
 function windowResized() {
@@ -32,7 +33,23 @@ function draw() {
   
   // orbitControl();
   
-  // ambientMaterial(255, 10);
+  // normalMaterial(200, 0, 0);
+  // specularMaterial(200, 0, 0);
+  
+  emissiveMaterial(255, 255, 255);
+
+  // var p5jsHover = document.querySelector(".selected-page");
+  // p5jsHover.addEventListener("mouseover", p5jsFast);
+  // p5jsHover.addEventListener('mouseout', p5jsSlow);
+
+  // function p5jsFast(event) {
+  //   console.log(event.target);
+  //   emissiveMaterial(0, 100, 100);
+  // }
+  // function p5jsSlow(event) {
+  //   console.log(event.target);
+  // }
+
   
   strokeWeight(0);
   
