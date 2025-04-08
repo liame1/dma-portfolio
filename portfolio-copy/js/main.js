@@ -88,12 +88,12 @@ function draw() {
   sphere(60, 20, 20);
   pop();
   
-    // Torus-1
-    push();
-    rotateZ(120);
-    rotateX(angle);
-    torus(100, 10, 30);
-    pop();
+  // Torus-1
+  push();
+  rotateZ(120);
+  rotateX(angle);
+  torus(100, 10, 30);
+  pop();
   
   // Torus-2
   push();
