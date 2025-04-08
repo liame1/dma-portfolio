@@ -30,7 +30,7 @@ line-height: 1.6;
 body {
 background: rgb(255, 236, 190);
 margin: 0;
-font-family: 'Open Sans', sans-serif;
+/* font-family: 'Open Sans', sans-serif; */
 }
 
 /* ----- THE DIVINE GRID ----- */
@@ -129,7 +129,7 @@ grid-area: content;
 margin: -3% 0 3% 0;
 }
 .about p {
-font-family: 'IBM Plex Sans Condensed', 'Open Sans', sans-serif;
+/* font-family: 'IBM Plex Sans Condensed', 'Open Sans', sans-serif; */
 font-size: 1rem;
 height: auto;
 }
