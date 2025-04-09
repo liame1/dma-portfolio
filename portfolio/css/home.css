@@ -62,7 +62,7 @@ margin: 0vh 0 2vh 0;
   grid-area: 'nav';
 }
 
-a {
+.page-select a {
 text-decoration: none;
 /* background-color: blueviolet; */
 color: inherit;
@@ -113,8 +113,16 @@ cursor: pointer;
 transform: scale(1.05);
 opacity: 0.95;
 }
+/* ----- MISC ----- */
+.modal-link {
+  color: rgb(228, 151, 180);
+}
+.modal-link:hover {
+  color: rgb(193, 159, 255);
+}
 
-/* ----- ABOUT PAGE ----- */
+
+/* ------ ABOUT PAGE ------ */
 .about {
 border-radius: 7px;
 color: white;
@@ -161,7 +169,6 @@ border-radius: 10px;
 position: fixed;
 width: auto;
 height: auto;
-
 
 background-color: rgba(0, 0, 0, .8);
 outline: 0;
@@ -275,6 +282,7 @@ transition: all 0.25s ease-out;
   }
   dialog h3 {
     grid-area: 3 / 2;
+    font-size: 1.6rem;
   }
   header {
     font-size: 2rem;
@@ -335,6 +343,9 @@ transition: all 0.25s ease-out;
   }
 }
 @media screen and (max-width: 630px) {
+  dialog h3 {
+    font-size: 1.4rem;
+  }
   header {
     margin: 0;
     font-size: 1.9rem;
@@ -344,6 +355,9 @@ transition: all 0.25s ease-out;
   }
 }
 @media screen and (max-width: 460px) {
+  dialog h3 {
+    font-size: 1.2rem;
+  }
   .preview-img img {
     max-width: 150px;
   }
