@@ -11,7 +11,7 @@ const dialog = document.querySelector(".dialog-container");
 
 // ~~~~~ INDIVIDUAL MODALS :
 // MODAL-01
-//const btn01 = document.querySelector(".btn-01");
+const btn01 = document.querySelector(".btn-01");
 const modal01 = document.querySelector(".modal-01");
 const image01 = document.querySelectorAll(".image-01");
 image01.forEach(interact => {
@@ -24,10 +24,10 @@ image01.forEach(interact => {
             modal01.close();
             dialog.style.display = "none";
         }
-        //else if (e.target.contains(btn01)) {
-        //    modal01.close();
-        //    dialog.style.display = "none";
-        //}
+        else if (e.target.contains(btn01)) {
+            modal01.close();
+            dialog.style.display = "none";
+        }
     });
 });
 // MODAL-02

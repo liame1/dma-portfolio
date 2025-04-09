@@ -8,13 +8,14 @@ let y = 0;
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight, WEBGL);
   canvas.position(0, 0);
-  canvas.style("z-index", -2);
+  canvas.style("z-index",-1);
   
   angleMode(DEGREES);
 
   // cam = createCamera();
   // // cam.lookAt(0, 0, 0);
   // translate(width/16, 0, height/5);
+
 }
 
 function windowResized() {
@@ -32,7 +33,23 @@ function draw() {
   
   // orbitControl();
   
-  // ambientMaterial(255, 10);
+  // normalMaterial(200, 0, 0);
+  // specularMaterial(200, 0, 0);
+  
+  emissiveMaterial(255, 255, 255);
+
+  // var p5jsHover = document.querySelector(".selected-page");
+  // p5jsHover.addEventListener("mouseover", p5jsFast);
+  // p5jsHover.addEventListener('mouseout', p5jsSlow);
+
+  // function p5jsFast(event) {
+  //   console.log(event.target);
+  //   emissiveMaterial(0, 100, 100);
+  // }
+  // function p5jsSlow(event) {
+  //   console.log(event.target);
+  // }
+
   
   strokeWeight(0);
   
@@ -71,12 +88,12 @@ function draw() {
   sphere(60, 20, 20);
   pop();
   
-    // Torus-1
-    push();
-    rotateZ(120);
-    rotateX(angle);
-    torus(100, 10, 30);
-    pop();
+  // Torus-1
+  push();
+  rotateZ(120);
+  rotateX(angle);
+  torus(100, 10, 30);
+  pop();
   
   // Torus-2
   push();
