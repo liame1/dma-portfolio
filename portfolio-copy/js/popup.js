@@ -8,9 +8,11 @@ image01.forEach(interact => {
         modal01.showModal();
         dialog.style.display = "inherit" ;
     });
-    modal01.addEventListener("click", () => {
-        modal01.close();
-        dialog.style.display = "none" ;
+    modal01.addEventListener("click", (e) => {
+        if(e.target.classList.contains("modal-01")){
+            modal01.close();
+            dialog.style.display = "none" ;
+        }
     });
 });
 // MODAL-02
@@ -21,9 +23,11 @@ image02.forEach(interact => {
         modal02.showModal();
         dialog.style.display = "inherit" ;
     });
-    modal02.addEventListener("click", () => {
-        modal02.close();
-        dialog.style.display = "none" ;
+    modal02.addEventListener("click", (e) => {
+        if(e.target.classList.contains("modal-02")){
+            modal02.close();
+            dialog.style.display = "none" ;
+        }
     });
 });
 // MODAL-03
@@ -34,9 +38,11 @@ image03.forEach(interact => {
         modal03.showModal();
         dialog.style.display = "inherit" ;
     });
-    modal03.addEventListener("click", () => {
-        modal03.close();
-        dialog.style.display = "none" ;
+    modal03.addEventListener("click", (e) => {
+        if(e.target.classList.contains("modal-03")){
+            modal03.close();
+            dialog.style.display = "none" ;
+        }
     });
 });
 // MODAL-04
@@ -47,9 +53,11 @@ image04.forEach(interact => {
         modal04.showModal();
         dialog.style.display = "inherit" ;
     });
-    modal04.addEventListener("click", () => {
-        modal04.close();
-        dialog.style.display = "none" ;
+    modal04.addEventListener("click", (e) => {
+        if(e.target.classList.contains("modal-04")){
+            modal04.close();
+            dialog.style.display = "none" ;
+        }
     });
 });
 // MODAL-05
@@ -60,9 +68,11 @@ image05.forEach(interact => {
         modal05.showModal();
         dialog.style.display = "inherit" ;
     });
-    modal05.addEventListener("click", () => {
-        modal05.close();
-        dialog.style.display = "none" ;
+    modal05.addEventListener("click", (e) => {
+        if(e.target.classList.contains("modal-05")){
+            modal05.close();
+            dialog.style.display = "none" ;
+        }
     });
 });
 // MODAL-06
@@ -73,9 +83,11 @@ image06.forEach(interact => {
         modal06.showModal();
         dialog.style.display = "inherit" ;
     });
-    modal06.addEventListener("click", () => {
-        modal06.close();
-        dialog.style.display = "none" ;
+    modal06.addEventListener("click", (e) => {
+        if(e.target.classList.contains("modal-06")){
+            modal06.close();
+            dialog.style.display = "none" ;
+        }
     });
 });
 // MODAL-07
@@ -86,9 +98,11 @@ image07.forEach(interact => {
         modal07.showModal();
         dialog.style.display = "inherit" ;
     });
-    modal07.addEventListener("click", () => {
-        modal07.close();
-        dialog.style.display = "none" ;
+    modal07.addEventListener("click", (e) => {
+        if(e.target.classList.contains("modal-07")){
+            modal07.close();
+            dialog.style.display = "none" ;
+        }
     });
 });
 // MODAL-08
@@ -99,9 +113,11 @@ image08.forEach(interact => {
         modal08.showModal();
         dialog.style.display = "inherit" ;
     });
-    modal08.addEventListener("click", () => {
-        modal08.close();
-        dialog.style.display = "none" ;
+    modal08.addEventListener("click", (e) => {
+        if(e.target.classList.contains("modal-08")){
+            modal08.close();
+            dialog.style.display = "none" ;
+        }
     });
 });
 // MODAL-09
@@ -112,9 +128,11 @@ image09.forEach(interact => {
         modal09.showModal();
         dialog.style.display = "inherit" ;
     });
-    modal09.addEventListener("click", () => {
-        modal09.close();
-        dialog.style.display = "none" ;
+    modal09.addEventListener("click", (e) => {
+        if(e.target.classList.contains("modal-09")){
+            modal09.close();
+            dialog.style.display = "none" ;
+        }
     });
 });
 // MODAL-10
@@ -125,9 +143,11 @@ image10.forEach(interact => {
         modal10.showModal();
         dialog.style.display = "inherit" ;
     });
-    modal10.addEventListener("click", () => {
-        modal10.close();
-        dialog.style.display = "none" ;
+    modal10.addEventListener("click", (e) => {
+        if(e.target.classList.contains("modal-10")){
+            modal10.close();
+            dialog.style.display = "none" ;
+        }
     });
 });
 // modal10.addEventListener("click", (e) => {
