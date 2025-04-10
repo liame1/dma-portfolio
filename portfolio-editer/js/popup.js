@@ -1,17 +1,42 @@
 // ~~~~~ GLOBAL VARIABLES:
-//const closeBtn = document.querySelector("button");
+const closeBtn = document.querySelector("button");
 const dialog = document.querySelector(".dialog-container");
 
 
-// closeBtn.onclick = function() {
-//     modal01.close();
-//     dialog.style.display = "none";
-// };
+closeBtn.onclick = function() {
+    modal01.close();
+    dialog.style.display = "none";
+};
+
+const previewImg = document.querySelectorAll(".preview-img img");
+const modal = document.querySelector(".dialog-container");
+
+previewImg.forEach(interact => {
+    const modalValue = interact.getAttribute("data-value");
+    interact.addEventListener("click", () => {
+        modalValue.showModal();
+    });
+    modal.addEventListener("click", (e) => {
+        if(e.target.classList.contains("modal-01")){
+            modal01.close();
+            dialog.style.display = "none";
+
+        const modalValue = interact.getAttribute("data-value");
+        original.src = originalSrc;
+        const altText = interact.alt;
+        caption.textContent = altText;
+    });
+});
+
+const modal = ;
+//else if (e.target.contains(closeBtn)) {
+//    modal02.close();
+//    dialog.style.display = "none";
+//}
 
 
 // ~~~~~ INDIVIDUAL MODALS :
 // MODAL-01
-const btn01 = document.querySelector(".btn-01");
 const modal01 = document.querySelector(".modal-01");
 const image01 = document.querySelectorAll(".image-01");
 image01.forEach(interact => {
@@ -21,10 +46,6 @@ image01.forEach(interact => {
     });     
     modal01.addEventListener("click", (e) => {
         if(e.target.classList.contains("modal-01")){
-            modal01.close();
-            dialog.style.display = "none";
-        }
-        else if (e.target.contains(btn01)) {
             modal01.close();
             dialog.style.display = "none";
         }
@@ -43,10 +64,6 @@ image02.forEach(interact => {
             modal02.close();
             dialog.style.display = "none";
         }
-        //else if (e.target.contains(closeBtn)) {
-        //    modal02.close();
-        //    dialog.style.display = "none";
-        //}
     });
 });
 // MODAL-03
@@ -62,10 +79,6 @@ image03.forEach(interact => {
             modal03.close();
             dialog.style.display = "none";
         }
-        //else if (e.target.contains(closeBtn)) {
-        //    modal03.close();
-        //    dialog.style.display = "none";
-        //}
     });
 });
 // MODAL-04
