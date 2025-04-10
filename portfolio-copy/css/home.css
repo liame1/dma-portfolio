@@ -162,7 +162,7 @@ dialog {
 margin: 7%;
 display: grid;
 grid-template-columns: 2% auto 38% 4%;
-grid-template-rows: 4% auto 4%;
+grid-template-rows: 4% 92% 4%;
 justify-items: center;
 border-radius: 10px;
 
@@ -194,7 +194,6 @@ dialog button:hover {
 dialog h3 {
   text-align: center;
   padding: 5%;
-  /* text-align: center; */
   color: white;
   grid-area: 2 / 3;
 }
@@ -271,11 +270,12 @@ transition: all 0.25s ease-out;
 }
 @media screen and (max-width: 1160px) {
   dialog {
-    margin: center;
+    padding: 5%;
     grid-template-columns: 3% auto 3%;
-    grid-template-rows: 2% auto auto 2%;
+    grid-template-rows: 6% auto 35% 0%;
   }
   dialog h3 {
+    top: 0;
     grid-area: 3 / 2;
     font-size: 1.6rem;
   }

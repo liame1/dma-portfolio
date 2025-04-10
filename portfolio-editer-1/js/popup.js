@@ -1,34 +1,13 @@
 // ~~~~~ GLOBAL VARIABLES:
-const closeBtn = document.querySelector("button");
+// const closeBtn = document.querySelector("button");
 const dialog = document.querySelector(".dialog-container");
 
 
-closeBtn.onclick = function() {
-    modal01.close();
-    dialog.style.display = "none";
-};
+// closeBtn.onclick = function() {
+//     modal01.close();
+//     dialog.style.display = "none";
+// };
 
-const previewImg = document.querySelectorAll(".preview-img img");
-const modal = document.querySelector(".dialog-container");
-
-previewImg.forEach(interact => {
-    const modalValue = interact.getAttribute("data-value");
-    interact.addEventListener("click", () => {
-        modalValue.showModal();
-    });
-    modal.addEventListener("click", (e) => {
-        if(e.target.classList.contains("modal-01")){
-            modal01.close();
-            dialog.style.display = "none";
-
-        const modalValue = interact.getAttribute("data-value");
-        original.src = originalSrc;
-        const altText = interact.alt;
-        caption.textContent = altText;
-    });
-});
-
-const modal = ;
 //else if (e.target.contains(closeBtn)) {
 //    modal02.close();
 //    dialog.style.display = "none";
