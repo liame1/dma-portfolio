@@ -191,11 +191,20 @@ dialog button {
 dialog button:hover {
   background: rgb(100, 0, 0);
 }
-dialog h3 {
-  text-align: center;
-  padding: 5%;
-  color: white;
+.description {
   grid-area: 2 / 3;
+}
+dialog h3 {
+  font-style: italic;
+  text-align: center;
+  padding: 5% 5% 2% 5%;
+  color: white;
+}
+dialog p {
+  text-align: center;
+  font-size: 1rem;
+  padding: 0% 5% 5% 5%;
+  color: white;
 }
 dialog img {
   grid-area: 2 / 2;
@@ -274,7 +283,7 @@ transition: all 0.25s ease-out;
     grid-template-columns: 3% auto 3%;
     grid-template-rows: 6% auto 35% 0%;
   }
-  dialog h3 {
+  dialog .description {
     top: 0;
     grid-area: 3 / 2;
     font-size: 1.6rem;
@@ -340,6 +349,9 @@ transition: all 0.25s ease-out;
 @media screen and (max-width: 630px) {
   dialog h3 {
     font-size: 1.4rem;
+  }
+  dialog p {
+    font-size: 0.8rem;
   }
   header {
     margin: 0;
